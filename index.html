@@ -3,10 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Load Poppins to match local font and add preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <title>McDo Vending Machine</title>
   <style>
+    /* Minimal reset + consistent box-sizing so hosted site matches local */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    /* Ensure same font loaded */
+    body { font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
     body {
-      font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #ffd5a5, #ffb347);
       margin: 0;
       padding: 0;
@@ -297,6 +305,7 @@
         <button class="btn" onclick="insertDenom(5)">5</button>
         <button class="btn" onclick="insertDenom(10)">10</button>
         <button class="btn" onclick="insertDenom(100)">100</button>
+        <button class="btn" onclick="insertDenom(500)">500</button>
         <button class="btn" onclick="insertDenom(1000)">1000</button>
         <button class="btn pay-btn" onclick="pay()">Pay</button>
       </div>
